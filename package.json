@@ -1,0 +1,22 @@
+{
+  "name": "first-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./webpack.config.js",
+    "start": "node ./build/src.js"
+  },
+  "author": "pick4er",
+  "license": "WTFPL",
+  "engines": {
+    "node": "^11.2.x"
+  },
+  "dependencies": {
+    "webpack": "^4.39.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.6"
+  }
+}
