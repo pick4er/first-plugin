@@ -1,4 +1,5 @@
 const path = require('path');
+const FirstPlugin = require('./plugin');
 
 const baseDir = path.resolve('./');
 
@@ -16,4 +17,7 @@ module.exports = {
     extensions: ['.js'],
     modules: [baseDir, 'node_modules'],
   },
+  plugins: [
+    new FirstPlugin(),
+  ],
 }
