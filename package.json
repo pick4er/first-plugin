@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./webpack.config.js",
+    "clear": "rm -rf ./build ./dist",
+    "build": "npm run clear && npm run transpile && webpack --config ./webpack.config.js",
+    "transpile": "tsc -p ./tsconfig.json",
     "start": "node ./build/src.js"
   },
   "author": "pick4er",
@@ -13,10 +14,18 @@
   "engines": {
     "node": "^11.2.x"
   },
+  "peerDependencies": {
+    "webpack": "*"
+  },
   "dependencies": {
-    "webpack": "^4.39.1"
+    "@types/webpack": "^4.32.2",
+    "del": "^5.0.0"
   },
   "devDependencies": {
-    "webpack-cli": "^3.3.6"
+    "@types/node": "^12.7.2",
+    "del-cli": "^2.0.0",
+    "typescript": "^3.5.3",
+    "webpack-cli": "^3.3.6",
+    "webpack": "^4.32.2"
   }
 }

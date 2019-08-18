@@ -1,5 +1,5 @@
 const path = require('path');
-const FirstPlugin = require('./plugin');
+const { FirstPlugin } = require('./dist');
 
 const baseDir = path.resolve('./');
 

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        // Enable strictest settings like strictNullChecks & noImplicitAny.
+        "strict": true,
+        "outDir": "dist",
+        // Transpiled target es version
+        "target": "es6",
+        // Specify module code generation: 'commonjs', 'amd', 'system', 'umd' or 'es2015'.
+        "module": "commonjs",
+        // Process & infer types from .js files.
+        "allowJs": true,
+        // Allow default imports from modules with no default export.
+        "allowSyntheticDefaultImports": true,
+        // Search under node_modules for non-relative imports.
+        "moduleResolution": "node"
+    },
+    "include": ["plugin"]
+}

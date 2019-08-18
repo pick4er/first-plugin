@@ -1,7 +1,10 @@
+import { Compiler } from 'webpack';
 
 class FirstPlugin {
-  apply(compiler) {
-    compiler.hooks.emit.tapAsync('FirstPlugin', (compilation, cbk) => {
+  apply(compiler: Compiler) {
+    const hooks = compiler.hooks;
+
+    hooks.emit.tapAsync('FirstPlugin', (compilation, cbk) => {
       let filelist = 'In this build:\n\n';
 
       for (let filename in compilation.assets) {
@@ -22,4 +25,4 @@ class FirstPlugin {
   }
 }
 
-module.exports = FirstPlugin;
+export { FirstPlugin };
