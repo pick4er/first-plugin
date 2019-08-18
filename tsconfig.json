@@ -12,7 +12,10 @@
         // Allow default imports from modules with no default export.
         "allowSyntheticDefaultImports": true,
         // Search under node_modules for non-relative imports.
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        // Import non-ES modules as default imports.
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
     },
     "include": ["plugin"]
 }

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clear": "rm -rf ./build ./dist",
+    "clear": "rm -rf ./dist",
     "build": "npm run clear && npm run transpile && webpack --config ./webpack.config.js",
     "transpile": "tsc -p ./tsconfig.json",
     "start": "node ./build/src.js"
